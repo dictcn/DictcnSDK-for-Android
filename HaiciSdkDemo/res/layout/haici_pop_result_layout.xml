@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/haici_pop_result"
+    android:tag="haici_pop_result">
+    
+    <LinearLayout 
+        android:id="@+id/haici_pop_result_top"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+        <!-- 输入框 -->
+    	<include layout="@layout/haici_pop_result_input_layout"/>
+    	<!-- 输入框不存在时单词显示文本 -->
+	    <TextView
+	        android:id="@+id/haici_pop_result_key"
+	        android:tag="haici_pop_result_key"
+	        android:layout_width="fill_parent"
+	        android:layout_height="50dp"
+	        android:background="@drawable/haici_pop_result_top_bg"
+	        android:gravity="center"
+	        android:textColor="#000000"
+	        android:textSize="24sp"
+	        android:visibility="gone"/>
+    </LinearLayout>
+    
+     <!-- 更多词典 -->
+     <RelativeLayout
+        android:id="@+id/haici_pop_result_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/haici_pop_result_bottom_bg"
+        android:tag="haici_pop_result_bottom" >
+        <LinearLayout
+            android:id="@+id/haici_pop_result_bottom_content"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right|center_vertical"
+            android:paddingBottom="8dp"
+            android:paddingRight="4dp"
+            android:tag="haici_pop_result_bottom_content" >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/haici_pop_setting" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:tag="haici_pop_result_bottom_text"
+                android:textColor="#15a8a6"
+                android:textSize="14sp"/>
+            <LinearLayout 
+                android:layout_width="30dp"
+            	android:layout_height="wrap_content"
+            	android:orientation="vertical">
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:tag="haici_pop_result_bottom_num_text"
+	                android:textColor="#15a8a6"
+	                android:textSize="14sp"
+	                android:singleLine="true"
+	                android:ellipsize="none"
+	                android:text="(10)"/>
+                <ImageView
+	                android:tag="haici_pop_result_bottom_req"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+	                android:background="@drawable/haici_pop_req3"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:tag="haici_pop_result_content" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/haici_pop_result_top"
+        android:layout_above="@id/haici_pop_result_bottom"
+        android:background="@drawable/haici_pop_result_center_bg"
+        android:orientation="vertical">
+        <!-- 查词结果 -->
+        <ListView
+            android:tag="haici_pop_result_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="#e7e7e7"
+            android:dividerHeight="1px"/>
+        <!-- 查不到词的提示文本 -->
+        <TextView
+            android:id="@+id/haici_pop_result_tip"
+            android:tag="haici_pop_result_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="60dp"
+            android:textColor="#adadad"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+        <!-- 推荐词典 -->
+	    <RelativeLayout 
+	        android:tag="haici_pop_result_recommend" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:visibility="gone">
+	        <ImageView 
+	            android:id="@+id/haici_pop_result_recommend_arrow"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_alignParentRight="true"
+	        	android:layout_centerVertical="true"
+	        	android:layout_marginLeft="10dp"
+	        	android:src="@drawable/haici_pop_arrow"/>
+	        <TextView
+	            android:id="@+id/haici_pop_result_recommend_label"
+		        android:tag="haici_pop_result_recommend_label"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_toLeftOf="@id/haici_pop_result_recommend_arrow"
+		        android:textColor="#999999"
+		        android:textSize="14sp"
+		        android:singleLine="true"/>
+	        <TextView
+		        android:tag="haici_pop_result_recommend_define"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_toLeftOf="@id/haici_pop_result_recommend_arrow"
+		        android:layout_below="@id/haici_pop_result_recommend_label"
+		        android:layout_marginTop="5dp"
+		        android:textColor="#404040"
+		        android:textSize="14sp"
+		        android:singleLine="true"/>
+	    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

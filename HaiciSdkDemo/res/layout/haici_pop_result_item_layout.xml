@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/haici_pop_result_item"
+    android:background="#ffffff">
+    <!-- 词典标签 -->
+    <TextView
+        android:tag="haici_pop_result_item_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        android:singleLine="true"/>
+    
+    <!-- 单词key -->
+    <TextView
+        android:tag="haici_pop_result_item_key"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:textStyle="bold"
+        android:textColor="#404040"
+        android:textSize="18sp"/>
+    
+    <!-- 音标、发音、添加生词本 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView 
+            android:tag="haici_pop_result_item_pron"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:paddingLeft="10dp"
+        	android:paddingTop="10dp"
+        	android:textColor="#404040"
+        	android:textSize="14sp"
+        	android:text="1231231"/>
+        <com.haici.dict.sdk.view.HaiciImageView 
+            android:tag="haici_pop_result_item_sound"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:paddingLeft="10dp"
+        	android:paddingTop="10dp"
+        	android:src="@drawable/haici_pop_voice"/>
+        <com.haici.dict.sdk.view.HaiciImageView 
+            android:tag="haici_pop_result_item_scb"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:paddingLeft="10dp"
+        	android:paddingTop="10dp"
+        	android:paddingRight="10dp"
+        	android:src="@drawable/haici_pop_not_add"/>
+    </LinearLayout>
+    
+    <!-- 文本释义 -->
+    <com.haici.dict.sdk.view.HaiciTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/haici_pop_arrow"
+        android:lineSpacingExtra="6dp"
+        android:tag="haici_pop_result_item_def"
+        android:textColor="#404040"
+        android:textSize="14sp" />
+
+    <!-- 图片释义 -->
+    <com.haici.dict.sdk.view.HaiciRelativeLayout 
+        android:tag="haici_pop_result_item_image_def_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone">
+        <ImageView 
+            android:id="@+id/haici_pop_result_item_image_arrow"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:layout_centerVertical="true"
+        	android:layout_marginLeft="10dp"
+        	android:src="@drawable/haici_pop_arrow"/>
+        <LinearLayout 
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_toLeftOf="@id/haici_pop_result_item_image_arrow"
+        	android:layout_centerVertical="true">
+            <ImageView 
+	            android:tag="haici_pop_result_item_image_def"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.haici.dict.sdk.view.HaiciRelativeLayout>
+    
+    <!-- 相关词分割线 -->
+    <View android:tag="haici_pop_result_item_relatedkey_line" 
+        android:layout_width="fill_parent" 
+        android:layout_height="1px"
+        android:background="#e7e7e7"
+        android:visibility="gone"/>
+    <!-- 相关词 -->
+    <com.haici.dict.sdk.view.HaiciFlowLayout 
+        android:tag="haici_pop_result_item_relatedkey"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"/>
+    
+    <!-- 推荐词典分割线 -->
+    <View android:tag="haici_pop_result_item_recommend_line" 
+        android:layout_width="fill_parent" 
+        android:layout_height="1px"
+        android:background="#e7e7e7"
+        android:visibility="gone"/>
+    <!-- 推荐词典 -->
+    <RelativeLayout 
+        android:tag="haici_pop_result_item_recommend" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone">
+        <ImageView 
+            android:id="@+id/haici_pop_result_item_recommend_arrow"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:layout_centerVertical="true"
+        	android:layout_marginLeft="10dp"
+        	android:src="@drawable/haici_pop_arrow"/>
+        <TextView
+            android:id="@+id/haici_pop_result_item_recommend_label"
+	        android:tag="haici_pop_result_item_recommend_label"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/haici_pop_result_item_recommend_arrow"
+	        android:textColor="#999999"
+	        android:textSize="14sp"
+	        android:singleLine="true"/>
+        <TextView
+	        android:tag="haici_pop_result_item_recommend_define"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/haici_pop_result_item_recommend_arrow"
+	        android:layout_below="@id/haici_pop_result_item_recommend_label"
+	        android:layout_marginTop="5dp"
+	        android:textColor="#404040"
+	        android:textSize="14sp"
+	        android:singleLine="true"/>
+    </RelativeLayout>
+</LinearLayout>

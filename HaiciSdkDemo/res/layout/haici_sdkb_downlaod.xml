@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4f000000"
+    android:visibility="gone"
+    android:tag="haici_sdkb_download">
+    
+	<RelativeLayout
+	    android:tag="haici_sdkb_download_bottom"
+	    android:layout_width="match_parent"
+    	android:layout_height="180dp"
+    	android:layout_alignParentBottom="true"
+    	android:background="#f4f2ee">
+	    <TextView 
+	        android:id="@+id/haici_sdkb_download_bottom_tip"
+	        android:tag="haici_sdkb_download_bottom_tip"
+	        android:layout_width="match_parent"
+    		android:layout_height="33dp"
+    		android:layout_alignParentTop="true"
+    		android:gravity="center_vertical"
+    		android:paddingLeft="10dp"
+    		android:textSize="20sp"
+    	    android:textColor="#ff7200"
+    	    android:text="提示"/>
+	    <!-- 分割线 -->
+	    <View 
+	        android:id="@+id/haici_sdkb_download_bottom_line"
+	        android:layout_width="match_parent"
+    		android:layout_height="1px"
+    		android:layout_below="@id/haici_sdkb_download_bottom_tip"
+    		android:layout_marginLeft="1dp"
+    		android:layout_marginRight="1dp"
+    		android:background="#dbd8d3"/>
+	    <!-- 按钮 -->
+	    <LinearLayout
+	        android:id="@+id/haici_sdkb_download_bottom_btn"
+	        android:layout_width="match_parent"
+    		android:layout_height="53dp"
+    		android:layout_alignParentBottom="true"
+    		android:orientation="vertical">
+	        <View android:layout_width="match_parent" android:layout_height="1px" android:background="#cfcfcf"/>
+	        <View android:layout_width="match_parent" android:layout_height="1px" android:background="#e6e5e2"/>
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+    			android:layout_height="match_parent"
+    			android:orientation="horizontal">
+	            <TextView 
+			        android:tag="haici_sdkb_download_bottom_btn1"
+			        android:layout_width="0dp"
+		    		android:layout_height="match_parent"
+		    		android:layout_weight="1.0"
+		    		android:gravity="center"
+		    		android:textSize="18sp"
+		    	    android:textColor="#585858"
+		    	    android:text="取消"/>
+	            
+	            <View android:layout_width="1px" android:layout_height="match_parent" android:background="#e8e7e4"/>
+	        	<View android:layout_width="1px" android:layout_height="match_parent" android:background="#cfcfcf"/>
+	            
+	            <com.haici.dict.sdk.view.HaiciTextView 
+			        android:tag="haici_sdkb_download_bottom_btn2"
+			        android:layout_width="0dp"
+		    		android:layout_height="match_parent"
+		    		android:layout_weight="1.0"
+		    		android:gravity="center"
+		    		android:textSize="18sp"
+		    	    android:textColor="#ff7200"
+		    	    android:text="下载(约16M)"/>
+	        </LinearLayout>
+	    </LinearLayout>
+		<!-- 提示文本 -->
+	    <TextView
+	        android:tag="haici_sdkb_download_bottom_text"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_below="@id/haici_sdkb_download_bottom_line"
+	        android:layout_above="@id/haici_sdkb_download_bottom_btn"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:gravity="center"
+	        android:text="请先下载安装最新版“海词词典”"
+	        android:textColor="#333333"
+	        android:textSize="18sp" />
+	</RelativeLayout>
+</RelativeLayout>

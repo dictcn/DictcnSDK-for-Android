@@ -1,0 +1,45 @@
+# view res/layout/main.xml #generated:26
+-keep class com.haici.dict.sdk.demo_e.HaiciCustomEditText { <init>(...); }
+
+# view res/layout/main.xml #generated:20
+-keep class com.haici.dict.sdk.demo_e.MyScrollView { <init>(...); }
+
+# view res/layout/main.xml #generated:38
+-keep class com.haici.dict.sdk.demo_e.ShaderView { <init>(...); }
+
+# view AndroidManifest.xml #generated:18
+-keep class com.haici.dict.sdk.demo_e.TestActivity { <init>(...); }
+
+# view res/layout/haici_pop_result_item_layout.xml #generated:116
+-keep class com.haici.dict.sdk.view.HaiciFlowLayout { <init>(...); }
+
+# view res/layout/haici_pop_result_item_layout.xml #generated:47
+# view res/layout/haici_pop_result_item_layout.xml #generated:54
+# view res/layout/haici_sdkb_search_result_content_item.xml #generated:63
+# view res/layout/haici_sdkb_search_result_content_item.xml #generated:79
+# view res/layout/haici_sdkb_search_result_content_item.xml #generated:96
+-keep class com.haici.dict.sdk.view.HaiciImageView { <init>(...); }
+
+# view res/layout/haici_sdkb_search_result_content_item.xml #generated:57
+-keep class com.haici.dict.sdk.view.HaiciLinearLayout { <init>(...); }
+
+# view res/layout/haici_pop_result_item_layout.xml #generated:80
+# view res/layout/haici_sdkb_search_result_content_item.xml #generated:2
+-keep class com.haici.dict.sdk.view.HaiciRelativeLayout { <init>(...); }
+
+# view res/layout/haici_pop_layout.xml #generated:2
+-keep class com.haici.dict.sdk.view.HaiciResizeLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class com.haici.dict.sdk.view.HaiciSdkEActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:35
+-keep class com.haici.dict.sdk.view.HaiciSdkReciver { <init>(...); }
+
+# view res/layout/haici_pop_result_item_layout.xml #generated:65
+# view res/layout/haici_sdkb_downlaod.xml #generated:61
+# view res/layout/haici_sdkb_search_result.xml #generated:8
+# view res/layout/haici_sdkb_search_result_content_item.xml #generated:88
+# view res/layout/haici_sdke_downlaod.xml #generated:44
+-keep class com.haici.dict.sdk.view.HaiciTextView { <init>(...); }
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#383838"
+    android:tag="haici_sdkb_search">
+    <!-- 查词工具栏 -->
+    <include layout="@layout/haici_sdkb_search_tool"/>
+    <!-- 分割线 -->
+    <View android:tag="haici_sdkb_search_tool_line" android:layout_width="match_parent" android:layout_height="1px" android:background="#999999"/>
+    <!-- 查词内容 -->
+    <ScrollView 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:scrollbarStyle="outsideOverlay"
+    	android:padding="10dp">
+        <FrameLayout
+	        android:layout_width="match_parent"
+	    	android:layout_height="wrap_content">
+	    	<!-- 查词返回的结果显示区 -->
+	    	<include layout="@layout/haici_sdkb_search_result"/>
+	        <!-- 请求等待条 -->
+	        <include layout="@layout/haici_sdkb_search_requestwait"/>
+	    </FrameLayout>
+    </ScrollView>
+</LinearLayout>

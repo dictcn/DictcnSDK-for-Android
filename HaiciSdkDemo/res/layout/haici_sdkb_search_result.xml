@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:tag="haici_sdkb_search_result">
+    <!-- 未安装海词词典或下载海词词典进度提示文本 -->
+	<com.haici.dict.sdk.view.HaiciTextView 
+	    android:tag="haici_sdkb_search_result_tip"
+	    android:layout_width="match_parent"
+    	android:layout_height="20dp"
+    	android:drawableRight="@drawable/haici_sdkb_arrow2"
+    	android:drawablePadding="10dp"
+    	android:gravity="center_vertical|right"
+    	android:textColor="#15a8a6"
+    	android:textSize="14sp"
+    	android:visibility="gone"/>
+	<!-- 查词title -->
+	<include layout="@layout/haici_sdkb_search_result_title"/>
+	<!-- 未找到单词提示 -->
+	<TextView
+        android:id="@+id/haici_sdkb_search_result_notfound_tip"
+        android:tag="haici_sdkb_search_result_notfound_tip"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:textColor="#999999"
+        android:textSize="16sp"
+        android:text="未找到"
+        android:visibility="gone"/>
+	
+	<!-- 查词时动态添加查词结果view -->
+	<!-- 查词时动态添加推荐词典view -->
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:tag="haici_sdkb_search_result_title">
+    <LinearLayout
+        android:id="@+id/haici_sdkb_search_result_title_more"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+        <TextView
+            android:tag="haici_sdkb_search_result_title_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:singleLine="true"
+            android:text="(10)"
+            android:textColor="#15a8a6"
+            android:textSize="14sp" />
+        <ImageView
+            android:tag="haici_sdkb_search_result_title_req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/haici_sdkb_req3"
+            android:visibility="gone" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/haici_sdkb_search_result_title_text"
+        android:tag="haici_sdkb_search_result_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:layout_toLeftOf="@id/haici_sdkb_search_result_title_more"
+        android:textColor="#15a8a6"
+        android:textSize="14sp"
+        android:text="权威词典"/>
+    <ImageView
+        android:id="@+id/haici_sdkb_search_result_title_icon"
+        android:tag="haici_sdkb_search_result_title_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/haici_sdkb_search_result_title_text"
+        android:src="@drawable/haici_sdkb_logo"/>
+    <!-- 单词key -->
+    <TextView
+        android:tag="haici_sdkb_search_result_title_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/haici_sdkb_search_result_title_icon"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:text="权威词典"/>
+</RelativeLayout>

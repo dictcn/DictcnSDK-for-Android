@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:tag="haici_sdkb_search_requestwait"
+    android:paddingBottom="20dp">
+    <!-- 单词key -->
+    <TextView
+        android:tag="haici_sdkb_search_requestwai_key"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:text="权威词典"
+        android:visibility="gone"/>
+    <ProgressBar
+        android:tag="haici_sdkb_search_requestwait_pb"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:indeterminateDrawable="@drawable/haici_sdkb_progressbar_style"/>
+    <TextView 
+        android:tag="haici_sdkb_search_requestwait_tip"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="20dp"
+    	android:gravity="center_horizontal"
+    	android:lineSpacingExtra="10dp"
+    	android:textColor="#ffffff"
+    	android:textSize="16sp"
+    	android:text="首次使用\n正在初始化词典，请稍后..."
+    	android:visibility="gone"/>
+</LinearLayout>

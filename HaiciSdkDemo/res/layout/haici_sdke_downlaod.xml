@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:tag="haici_sdke_download"
+    android:visibility="gone">
+    <LinearLayout
+        android:tag="haici_sdke_download_dialog"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@drawable/haici_sdke_bg"
+    	android:orientation="vertical">
+        <TextView
+	        android:tag="haici_sdke_download_text"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:lineSpacingExtra="5dp"
+	        android:gravity="center"
+	        android:textColor="#333333"
+	        android:textSize="18sp"/>
+        
+        <View android:layout_width="match_parent" android:layout_height="1px" android:background="#cfcfcf" android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+            <TextView
+                android:tag="haici_sdke_download_btn1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:textColor="#585858"
+                android:textSize="18sp" 
+                android:text="取消"/>
+            
+	        <View android:layout_width="1px" android:layout_height="match_parent" android:background="#cfcfcf"/>
+            
+            <com.haici.dict.sdk.view.HaiciTextView
+                android:tag="haici_sdke_download_btn2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:textColor="#ff7200"
+                android:textSize="18sp" 
+                android:text="安装"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

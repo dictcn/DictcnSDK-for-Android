@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/haici_pop_bg"
+    android:visibility="visible"
+    android:id="@+id/haici_pop_downlaod"
+    android:tag="haici_pop_downlaod">
+    <!-- 下载提示文本1 -->
+	<TextView
+	    android:tag="haici_pop_downlaod_tip1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dp"
+	    android:gravity="center"
+	    android:textColor="#000000"
+	    android:textSize="18sp"/>
+	<!-- 下载提示文本2 -->
+	<TextView
+	    android:tag="haici_pop_downlaod_tip2"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="6dp"
+	    android:gravity="center"
+	    android:textColor="#adadad"
+	    android:textSize="14sp"/>
+	<!-- 下载进度条 -->
+	<LinearLayout
+	    android:tag="haici_pop_downlaod_progress"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center"
+	    android:visibility="gone">
+	    <ProgressBar
+	        android:layout_width="30dp"
+	        android:layout_height="30dp"
+	        android:layout_gravity="center"
+	        android:indeterminateDrawable="@drawable/haici_pop_progressbar_style"/>
+	</LinearLayout>
+	<!-- 下载进度文本 -->
+	<TextView
+	    android:tag="haici_pop_downlaod_progress_text"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center"
+	    android:textColor="#000000"
+	    android:textSize="16sp"
+		android:visibility="gone"/>
+	<!-- 继续按钮 -->
+	<TextView
+	    android:tag="haici_pop_downlaod_btn"
+	    android:layout_width="160dp"
+	    android:layout_height="40dp"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginBottom="20dp"
+	    android:layout_gravity="center_horizontal"
+	    android:background="#00a4a2"
+	    android:gravity="center"
+	    android:textColor="#ffffff"
+	    android:textSize="20sp"/>
+	<!-- 取消按钮 -->
+	<TextView
+	    android:tag="haici_pop_cancel_btn"
+	    android:layout_width="80dp"
+	    android:layout_height="30dp"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginBottom="20dp"
+	    android:layout_gravity="center_horizontal"
+	    android:gravity="center"
+	    android:textColor="#adadad"
+	    android:textSize="16sp"
+		android:visibility="gone"/>
+</LinearLayout>

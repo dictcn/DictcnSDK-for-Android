@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haici.dict.sdk.view.HaiciRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:tag="haici_sdkb_search_result_content_item">
+    <ImageView
+        android:id="@+id/haici_sdkb_search_result_content_arrow"
+        android:tag="haici_sdkb_search_result_content_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/haici_sdkb_arrow"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_toLeftOf="@id/haici_sdkb_search_result_content_arrow"
+    	android:layout_centerVertical="true"
+    	android:layout_marginRight="10dp"
+    	android:orientation="vertical">
+        <!-- 词典标签 -->
+        <TextView
+            android:tag="haici_sdkb_search_result_content_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:singleLine="true"
+            android:textColor="#999a95"
+            android:textSize="14sp"/>
+        <!-- 单词key -->
+        <TextView
+            android:tag="haici_sdkb_search_result_content_key"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+		<!-- 音标、发音、添加生词本 -->
+	    <LinearLayout
+	        android:tag="haici_sdkb_search_result_content_pronsound"
+	        android:layout_width="wrap_content"
+	        android:layout_height="40dp"
+	        android:paddingRight="20dp"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal">
+	        <TextView
+	            android:tag="haici_sdkb_search_result_content_pron"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:paddingRight="10dp"
+	            android:gravity="center_vertical"
+	            android:textColor="#ffffff"
+	            android:textSize="14sp"/>
+	        <!-- 发音 -->
+	        <com.haici.dict.sdk.view.HaiciLinearLayout 
+	            android:tag="haici_sdkb_search_result_content_sound"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:orientation="horizontal"
+	            android:gravity="center_vertical">
+	            <com.haici.dict.sdk.view.HaiciImageView
+		            android:tag="haici_sdkb_search_result_content_sound_iv" 
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:paddingRight="10dp"
+		            android:scaleType="center"
+		            android:src="@drawable/haici_sdkb_voice3"/>
+		        <ProgressBar
+		            android:tag="haici_sdkb_search_result_content_sound_pb" 
+	        		android:layout_width="23dp"
+	        		android:layout_height="23dp"
+	        		android:layout_marginRight="10dp"
+	        		android:indeterminateDrawable="@drawable/haici_sdkb_sound_progressbar_style"
+	        		android:visibility="gone"/>
+	        </com.haici.dict.sdk.view.HaiciLinearLayout>
+	        
+	        <com.haici.dict.sdk.view.HaiciImageView
+	            android:tag="haici_sdkb_search_result_content_scb"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:paddingRight="10dp"
+	            android:scaleType="center"
+	            android:src="@drawable/haici_pop_not_add"/>
+	    </LinearLayout>
+	    <!-- 文本释义 -->
+	    <com.haici.dict.sdk.view.HaiciTextView
+	        android:tag="haici_sdkb_search_result_content_textDef"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:lineSpacingExtra="6dp"
+	        android:textColor="#ffffff"
+	        android:textSize="14sp"/>
+	    <!-- 图片释义 -->
+	    <com.haici.dict.sdk.view.HaiciImageView
+	        android:tag="haici_sdkb_search_result_content_imageDef" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</com.haici.dict.sdk.view.HaiciRelativeLayout>

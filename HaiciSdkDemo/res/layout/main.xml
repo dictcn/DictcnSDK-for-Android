@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#29b2c5"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:text="专业的词典解决方案演示"/>
+    <FrameLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="#ffffff">
+	    <com.haici.dict.sdk.demo_e.MyScrollView
+	         android:id="@+id/myScrollView"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:scrollbarStyle="outsideOverlay"
+	         android:background="#ffffff">
+	         <com.haici.dict.sdk.demo_e.HaiciCustomEditText
+		        android:id="@+id/haiciEditText"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:lineSpacingExtra="10dp"
+		        android:lineSpacingMultiplier="1.0"
+		        android:text="@string/sdk_test_text"
+		        android:textColor="#000000"
+		        android:textSize="20sp"
+		        android:padding="10dp"/>
+	    </com.haici.dict.sdk.demo_e.MyScrollView>
+	    
+	    <com.haici.dict.sdk.demo_e.ShaderView
+	        android:id="@+id/myShaderView"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:visibility="gone"/>
+	</FrameLayout>
+</LinearLayout>
